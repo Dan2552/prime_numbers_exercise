@@ -1,0 +1,2 @@
+defmodule PrimeNumbersExercise do
+end
