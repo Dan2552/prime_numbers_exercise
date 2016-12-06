@@ -9,10 +9,10 @@ defmodule TablePrinterTest do
       ["3", "4"]
     ]
 
-    expectation = """
+    expectation = String.trim_trailing("""
     |  1 |  2 |
     |  3 |  4 |
-    """
+    """)
 
     assert print(rows) == expectation
   end
