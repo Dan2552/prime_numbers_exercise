@@ -16,4 +16,18 @@ defmodule TablePrinterTest do
 
     assert print(rows) == expectation
   end
+
+  test "print: makes the columns as wide as the inside text" do
+    rows = [
+      ["apple", "banana"],
+      ["orange", "pinapple"]
+    ]
+
+    expectation = String.trim_trailing("""
+    |   apple |    banana |
+    |  orange |  pinapple |
+    """)
+
+    assert print(rows) == expectation
+  end
 end
