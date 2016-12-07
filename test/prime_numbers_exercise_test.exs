@@ -6,11 +6,11 @@ defmodule PrimeNumbersExerciseTest do
   test "main/1: prints a multiplication table of the supplied size" do
     capure = capture_io(fn -> PrimeNumbersExercise.main(["2"]) end)
 
-    expectation = String.trim_trailing("""
+    expectation = """
     |    |  1 |  2 |
     |  1 |  1 |  2 |
     |  2 |  2 |  4 |
-    """)
+    """
 
     assert capure == expectation
   end
