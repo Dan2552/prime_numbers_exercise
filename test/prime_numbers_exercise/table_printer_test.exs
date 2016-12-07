@@ -3,7 +3,7 @@ defmodule TablePrinterTest do
   import PrimeNumbersExercise.TablePrinter
   doctest PrimeNumbersExercise.TablePrinter
 
-  test "print: returns a formatted string resembling a table" do
+  test "print/1: returns a formatted string resembling a table" do
     rows = [
       ["1", "2"],
       ["3", "4"]
@@ -17,7 +17,7 @@ defmodule TablePrinterTest do
     assert print(rows) == expectation
   end
 
-  test "print: makes the columns as wide as the inside text" do
+  test "print/1: makes the columns as wide as the inside text" do
     rows = [
       ["apple", "banana"],
       ["orange", "pinapple"]
@@ -31,7 +31,7 @@ defmodule TablePrinterTest do
     assert print(rows) == expectation
   end
 
-  test "print: works with different sized lists" do
+  test "print/1: works with different sized lists" do
     rows = [
       ["1", "2", "3"],
       ["uno", "dos", "tres"],
