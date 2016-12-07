@@ -20,7 +20,8 @@ defmodule PrimeNumbersExercise.TablePrinter do
   defp column_max_length(col) do
     col
     |> Tuple.to_list
-    |> max_by(&String.length(&1))
+    |> max_by(&(&1 |> to_string |> String.length))
+    |> to_string
     |> String.length
   end
 
@@ -31,6 +32,9 @@ defmodule PrimeNumbersExercise.TablePrinter do
   defp cell_contents(tuple, widths) do
     {contents, index} = tuple
     width = at(widths, index)
-    String.rjust(contents, width)
+
+    contents
+    |> to_string
+    |> String.rjust(width)
   end
 end
