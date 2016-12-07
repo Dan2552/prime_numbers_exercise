@@ -7,6 +7,12 @@ defmodule PrimeNumbersExercise.PrimeNumbers do
     end
   end
 
+  def generate(first_x) do
+    Stream.iterate(1, &(&1 + 1))
+    |> Stream.filter(&prime?(&1))
+    |> Enum.take(first_x)
+  end
+
   defp divisible_by?(lhs, rhs) do
     rem(lhs, rhs) == 0
   end
