@@ -30,4 +30,22 @@ defmodule TablePrinterTest do
 
     assert print(rows) == expectation
   end
+
+  test "print: works with different sized lists" do
+    rows = [
+      ["1", "2", "3"],
+      ["uno", "dos", "tres"],
+      ["one", "two", "three"],
+      ["un", "deux", "trois"]
+    ]
+
+    expectation = String.trim_trailing("""
+    |    1 |     2 |      3 |
+    |  uno |   dos |   tres |
+    |  one |   two |  three |
+    |   un |  deux |  trois |
+    """)
+
+    assert print(rows) == expectation
+  end
 end
