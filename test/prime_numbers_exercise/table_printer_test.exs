@@ -48,4 +48,18 @@ defmodule TablePrinterTest do
 
     assert print(rows) == expectation
   end
+
+  test "print/1: works with integers and nils as inputs" do
+    rows = [
+      [nil, 1, 2],
+      [3, 4, 5]
+    ]
+
+    expectation = String.trim_trailing("""
+    |    |  1 |  2 |
+    |  3 |  4 |  5 |
+    """)
+
+    assert print(rows) == expectation
+  end
 end
