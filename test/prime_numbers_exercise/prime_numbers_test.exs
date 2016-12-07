@@ -1,7 +1,6 @@
 defmodule PrimeNumbersTest do
   use ExUnit.Case
   import PrimeNumbersExercise.PrimeNumbers
-  doctest PrimeNumbersExercise.PrimeNumbers
 
   test "prime?/1: returns true if number is prime" do
     assert prime?(2)

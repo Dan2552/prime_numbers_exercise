@@ -1,6 +1,5 @@
 defmodule PrimeNumbersExerciseTest do
   use ExUnit.Case
-  doctest PrimeNumbersExercise
   import ExUnit.CaptureIO
 
   test "main/1: prints a multiplication table of the supplied size, skipping numbers that aren't prime" do

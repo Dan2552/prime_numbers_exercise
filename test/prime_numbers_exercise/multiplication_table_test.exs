@@ -1,7 +1,6 @@
 defmodule MultiplicationTableTest do
   use ExUnit.Case
   import PrimeNumbersExercise.MultiplicationTable
-  doctest PrimeNumbersExercise.MultiplicationTable
 
   test "generate_table/1: creates a multiplication table using supplied numbers" do
     numbers = [1, 2]

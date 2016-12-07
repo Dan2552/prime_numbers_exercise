@@ -1,7 +1,6 @@
 defmodule TablePrinterTest do
   use ExUnit.Case
   import PrimeNumbersExercise.TablePrinter
-  doctest PrimeNumbersExercise.TablePrinter
 
   test "print/1: returns a formatted string resembling a table" do
     rows = [
