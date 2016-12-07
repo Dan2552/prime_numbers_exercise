@@ -1,15 +1,17 @@
 defmodule PrimeNumbersExercise.MultiplicationTable do
+  import Enum, only: [map: 2]
+
   def generate_table(numbers) do
     heading = [nil | numbers]
     [heading | generate_rows(numbers)]
   end
 
   defp generate_rows(numbers) do
-    Enum.map(numbers, &generate_row(&1, numbers))
+    map(numbers, &generate_row(&1, numbers))
   end
 
   defp generate_row(row_multiplier, numbers) do
-    values = Enum.map(numbers, fn(col_multiplier) ->
+    values = map(numbers, fn(col_multiplier) ->
       row_multiplier * col_multiplier
     end)
 
